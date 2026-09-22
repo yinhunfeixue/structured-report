@@ -5,7 +5,7 @@ license: MIT
 compatibility: 纯 Markdown 指令，不含脚本，无系统依赖与网络访问需求。适用于任何遵循 Agent Skills 标准的 agent。
 metadata:
   author: "xujunjie"
-  version: "2.1.0"
+  version: "2.1.1"
   language: "zh-CN"
 ---
 
