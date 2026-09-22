@@ -13,7 +13,7 @@
         ├── references/               # 按需加载的详细文档
         │   ├── principles.md         # 19 条原则
         │   ├── frameworks.md         # 金字塔 / SCQA / STAR / 矩阵 / 5 Why
-        │   ├── writing-rules.md      # 11 条精简改写规则 + 反例对照
+        │   ├── writing-rules.md      # 12 条改写规则 + 整段诊断演示
         │   └── checklist.md          # 自检清单：硬门禁 + 优化项
         └── assets/                   # 文档模板
             ├── template-progress.md
@@ -67,7 +67,7 @@ cp -R skills/structured-report ~/.agents/skills/
 ## 使用
 
 ```
-/structured-report 帮我写 Q3 增长团队的季度汇报
+/structured-report 写一份本季度的项目进展汇报
 /structured-report 改写这份周报（粘贴草稿）
 ```
 
@@ -93,7 +93,7 @@ SKILL.md 正文开头重复一次该约束，作为二次保险。
 |---|---|
 | 想清楚 | 受众导向、隐性思维显性化、So What / Why 双向追问、事实与观点分离 |
 | 排结构 | 结论先行、以上统下、MECE、逻辑递进、显性思维结构化、黄金三点法、平行结构、结构思维形象化 |
-| 写文字 | 短语 + 句子合成列表项、标题即结论、量化配基准、删减 30% |
+| 写文字 | 短语 + 句子合成列表项、标题即结论、量化配基准、写完必删一轮 |
 | 对人 | 行动项 SMART、风险前置 + 闭环、归属与出处 |
 
 完整说明见 `skills/structured-report/references/principles.md`。
@@ -117,7 +117,7 @@ SKILL.md 正文开头重复一次该约束，作为二次保险。
 - 可选字段 `license`、`compatibility`、`metadata` 均符合标准约束
 - 遵循渐进式披露：入口文件承载硬约束与流程，长文档放 `references/`，模板放 `assets/`
 - 文件引用为相对路径且只有一层深
-- 硬约束单一来源：配额数值、必备章节、门禁条目只在 `SKILL.md` 声明，`references/` 只做展开，避免两处漂移
+- 硬约束单一来源：配额数值只在 `SKILL.md` 声明，门禁条目只在 `checklist.md` 声明，删除词表只在 `writing-rules.md` 声明，其余文件一律引用不复述
 - 全文不含具体业务场景：规则与示范一律用占位符和抽象类型，不绑定行业、产品或真实指标名，便于迁移到任意场景
 
 可用官方 `skills-ref` 校验库验证 front-matter 与命名规范。
